@@ -1,0 +1,163 @@
+/* General styles */
+body {
+    background-image: url('path/to/your/background-image.jpg'); /* Replace with your pattern image */
+    background-repeat: repeat; /* Ensure the pattern repeats across the screen */
+    background-position: center; /* Position background */
+    animation: backgroundMove 30s linear infinite; /* Apply animation to move background */
+    color: #333; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%; /* This will move the background diagonally */
+    }
+}
+
+header {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+    animation: fadeInUp 1s ease-out;
+}
+
+section h2 {
+    color: #28a745;
+    margin-bottom: 10px;
+    position: relative;
+    animation: fadeInLeft 1s ease-out;
+}
+
+section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #28a745;
+    animation: slideIn 1s ease-out;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #28a745;
+}
+
+/* Portfolio grid animations */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.portfolio-item {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #28a745;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
